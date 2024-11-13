@@ -16,7 +16,7 @@ menu:
 nav:
   enable: false
   travelling: true
-  clock: true
+  clock: false
   menu:
     - title: 网站
       item:
