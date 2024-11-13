@@ -19,11 +19,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: develop
+          submodules: true  # Ensure that submodules are updated
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '16'
 
       - name: Install dependencies
         run: |
@@ -52,11 +53,10 @@ jobs:
 
           cd public
           git init
-          git checkout -b $GIT_DEPLOY_BRANCH  # explicit creation and switch to the 'output' branch
-          
+          git checkout -b $GIT_DEPLOY_BRANCH
+
           git add .
           git commit -m "Deploy to GitHub Pages"
           
-          # Add remote and push to the correct branch
           git remote add origin git@github.com:biuaxia/blog_20241113.git
-          git push --force origin $GIT_DEPLOY_BRANCH  # Ensure we push the branch named "output"
+          git push --force origin $GIT_DEPLOY_BRANCH
