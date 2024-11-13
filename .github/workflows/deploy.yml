@@ -35,25 +35,26 @@ jobs:
           hexo clean
           hexo generate
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "${GIT_USER}"
+          git config --global user.email "${GIT_EMAIL}"
+
       - name: Deploy to GitHub Pages
         env:
           DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
         run: |
-          # 创建 .ssh 目录并设置权限
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          
-          # 写入私钥并设置权限
           echo "${DEPLOY_KEY}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          
-          # 添加 GitHub 到 known_hosts
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
           cd public
           git init
           git remote add origin git@github.com:biuaxia/blog_20241113.git
           git checkout -b $GIT_DEPLOY_BRANCH
+          
           git add .
           git commit -m "Deploy to GitHub Pages"
           git push --force origin $GIT_DEPLOY_BRANCH
