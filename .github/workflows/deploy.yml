@@ -6,11 +6,8 @@ on:
       - develop
 
 env:
-  # 使用此 git 用户部署到 github 仓库
   GIT_USER: javerVip
-  # 使用此 git 邮箱部署到 github 仓库
   GIT_EMAIL: 1@javer.vip
-  # 要部署到的分支
   GIT_DEPLOY_BRANCH: output
 
 jobs:
@@ -18,42 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: 检出 develop 分支的代码
       - name: Check out code
         uses: actions/checkout@v2
         with:
           ref: develop
-
-      # Step 2: 安装 Node.js
+      
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # 使用适当的 Node.js 版本
+          node-version: '16'
 
-      # Step 3: 配置环境
-      - name: Configure Git
-        run: |
-          git config --global user.name "${{ env.GIT_USER }}"
-          git config --global user.email "${{ env.GIT_EMAIL }}"
-
-      # Step 4: 安装依赖
       - name: Install dependencies
         run: |
           npm install
           npm install hexo-cli -g
 
-      # Step 5: 启动 Hexo 并生成静态文件
       - name: Build Hexo
         run: |
           hexo clean
           hexo generate
 
-      # Step 6: 部署到 output 分支
       - name: Deploy to GitHub Pages
+        env:
+          DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
         run: |
           cd public
+          echo "${DEPLOY_KEY}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
           git init
-          git remote add origin https://github.com/biuaxia/blog_20241113.git
+          git remote add origin git@github.com:biuaxia/blog_20241113.git
           git checkout -b $GIT_DEPLOY_BRANCH
           git add .
           git commit -m "Deploy to GitHub Pages"
