@@ -2,6 +2,11 @@
 title: Windows 10 获取当前壁纸和锁屏
 date: 2024-11-15 09:40:28
 tags:
+ - Windows 10
+ - 壁纸
+ - 锁屏
+ - 注册表
+top_img: https://b3logfile.com/file/2024/11/image-sXtbTKp.png
 ---
 
 ## 前置条件
