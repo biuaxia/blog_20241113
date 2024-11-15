@@ -146,7 +146,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: left
+  position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     - /img/default_cover.jpg
@@ -601,9 +601,9 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#5AF07E"
-  dark_main: "#f2b94b"
-  paginator: "#5AF07E"
+  main: "#07C163"
+  dark_main: "#00A23C"
+  paginator: "#07C163"
   #   button_hover: "#FF7242"
   text_selection: "#2128bd"
   link_color: "var(--anzhiyu-fontcolor)"
@@ -611,9 +611,9 @@ theme_color:
   hr_color: "#4259ef23"
   code_foreground: "#fff"
   code_background: "var(--anzhiyu-code-stress)"
-  toc_color: "#5AF07E"
-  #   blockquote_padding_color: "#5AF07E"
-  #   blockquote_background_color: "#5AF07E"
+  toc_color: "#07C163"
+  #   blockquote_padding_color: "#07C163"
+  #   blockquote_background_color: "#07C163"
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
@@ -990,7 +990,7 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#5AF07E" # The background color of Toast Notification in light mode
+  bg_light: "#07C163" # The background color of Toast Notification in light mode
   bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
