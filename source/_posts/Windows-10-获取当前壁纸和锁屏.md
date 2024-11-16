@@ -1,6 +1,7 @@
 ---
 title: Windows 10 获取当前壁纸和锁屏
 date: 2024-11-15 09:40:28
+top_img: https://b3logfile.com/file/2024/11/image-sXtbTKp.png
 cover: https://b3logfile.com/file/2024/11/image-sXtbTKp.png
 categories: 技巧
 tags:

@@ -12,6 +12,9 @@ menu:
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
     留言板: /comments/ || anzhiyu-icon-envelope
 
+  支持我:
+    雨云服务器: https://www.rainyun.com/NDk5MDIy_ || 
+
 # nav相关配置
 nav:
   enable: false
