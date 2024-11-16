@@ -137,7 +137,7 @@ disable_top_img: false
 index_img: false # "background: url() top / cover no-repeat"
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: false
+default_top_img: true
 
 cover:
   # display the cover or not (是否显示文章封面)
@@ -159,7 +159,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: "请尝试站内搜索寻找文章"
+  subtitle: "404 Not found"
   background: https://bu.dusays.com/2023/05/08/645907596997d.gif
 
 post_meta:
@@ -476,14 +476,14 @@ footer:
     enable: false
     randomFriends: 3
     project:
-      # - title: 服务
-      #   links:
+      - title: 服务
+        links:
       #     - title: 51la统计
       #       link: https://v6.51.la/
       #     - title: 十年之约
       #       link: https://www.foreverblog.cn/
-      #     - title: 开往
-      #       link: https://github.com/travellings-link/travellings
+          - title: 开往
+            link: https://github.com/travellings-link/travellings
       # - title: 主题
       #   links:
       #     - title: 文档
@@ -517,8 +517,8 @@ footer:
     linkList:
       # - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
       #   text: 主题
-      # - link: https://image.anheyu.com
-      #   text: 图床
+      - link: https://www.rainyun.com/NDk5MDIy_
+        text: 雨云（带推广，多多支持下）
       - link: https://beian.miit.gov.cn/
         text: 蜀ICP备2022028764号
     subTitle:
@@ -672,7 +672,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -1096,8 +1096,8 @@ LA:
 # 标签卖萌
 diytitle:
   enable: true
-  leaveTitle: w(ﾟДﾟ)w 不要走！再看看嘛！
-  backTitle: ♪(^∇^*)欢迎肥来！
+  leaveTitle: 别走，再看看吧QAQ
+  backTitle: 欢迎回来♪(^∇^*)
 
 # 留言弹幕配置
 comment_barrage_config:
@@ -1140,37 +1140,37 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
+  enable: true #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
-    # - greeting: 晚安😴
-    #   startTime: 0
-    #   endTime: 5
-    # - greeting: 早上好鸭👋, 祝你一天好心情！
-    #   startTime: 6
-    #   endTime: 9
-    # - greeting: 上午好👋, 状态很好，鼓励一下～
-    #   startTime: 10
-    #   endTime: 10
-    # - greeting: 11点多啦, 在坚持一下就吃饭啦～
-    #   startTime: 11
-    #   endTime: 11
-    # - greeting: 午安👋, 宝贝
-    #   startTime: 12
-    #   endTime: 14
-    # - greeting: 🌈充实的一天辛苦啦！
-    #   startTime: 14
-    #   endTime: 18
-    # - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
-    #   startTime: 19
-    #   endTime: 19
-    # - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
-    #   startTime: 20
-    #   endTime: 24
+    - greeting: 晚安😴
+      startTime: 0
+      endTime: 5
+    - greeting: 早上好鸭👋, 祝你一天好心情！
+      startTime: 6
+      endTime: 9
+    - greeting: 上午好👋, 状态很好，鼓励一下～
+      startTime: 10
+      endTime: 10
+    - greeting: 11点多啦, 在坚持一下就吃饭啦～
+      startTime: 11
+      endTime: 11
+    - greeting: 午安👋, 宝贝
+      startTime: 12
+      endTime: 14
+    - greeting: 🌈充实的一天辛苦啦！
+      startTime: 14
+      endTime: 18
+    - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
+      startTime: 19
+      endTime: 19
+    - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
+      startTime: 20
+      endTime: 24
 
 # 文章顶部ai摘要
 post_head_ai_description:
-  enable: true
+  enable: false
   gptName: AnZhiYu
   mode: local # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
@@ -1207,7 +1207,7 @@ agreementPopup:
 
 # 右键菜单
 rightClickMenu:
-  enable: false
+  enable: true
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
