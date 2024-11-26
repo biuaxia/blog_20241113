@@ -1,1 +1,15 @@
-{"bilibili":"https://space.bilibili.com/82193729","canSkip":false,"downloadUrl":"https://biuaxia.lanzouq.com/in04E29d1p5g","log":[{"class":"badge-error","content":"修复搜索出的修改器部分无法打开的问题 && 优化阅读时间为3秒钟","type":"缺陷"}],"updateDatetime":"2024年9月6日 19点15分","version":"1.0.3","wechat":"biuaxia"}
+{
+  "bilibili": "https://space.bilibili.com/82193729",
+  "canSkip": false,
+  "downloadUrl": "https://biuaxia.lanzouq.com/iDwBV2gbylgb",
+  "log": [
+    {
+      "class": "badge-info",
+      "content": "软件公告",
+      "type": "缺改善陷"
+    }
+  ],
+  "updateDatetime": "2024年11月26日 14点28分",
+  "version": "1.0.4",
+  "wechat": "biuaxia"
+}
